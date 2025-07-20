@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Learnify - E-Learning Platform</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .hero {
+      background: white;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .course-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .course-card {
+      background: white;
+      width: 250px;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .progress-bar, .testimonial, .faq-item {
+      margin-bottom: 20px;
+    }
+
+    progress {
+      width: 100%;
+      height: 20px;
+    }
+
+    .video-section {
+      text-align: center;
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+      border: none;
+    }
+
+    .instructors, .testimonials, .faq, .contact {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+
+    .instructor {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .instructor img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+    }
+
+    .faq-item h4 {
+      margin: 0;
+      color: #007bff;
+    }
+
+    .contact form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .contact input, .contact textarea {
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #f1f1f1;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 768px) {
+      .course-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Learnify - E-learning Platform</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#progress">Progress</a>
+      <a href="#video">Video</a>
+      <a href="#instructors">Instructors</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h2>Welcome to Learnify</h2>
+    <p>Interactive courses, progress tracking, and expert support for every learner.</p>
+    <a href="#courses" class="btn">Explore Courses</a>
+  </section>
+
+  <!-- Courses Section -->
+  <section id="courses">
+    <h2>Our Popular Courses</h2>
+    <div class="course-grid">
+      <div class="course-card">
+        <h3>HTML & CSS</h3>
+        <p>Design responsive websites with modern layouts.</p>
+      </div>
+      <div class="course-card">
+        <h3>JavaScript Basics</h3>
+        <p>Learn the language of the web with interactive scripts.</p>
+      </div>
+      <div class="course-card">
+        <h3>React JS</h3>
+        <p>Build dynamic user interfaces using components.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Section -->
+  <section id="progress">
+    <h2>Your Progress</h2>
+    <div class="progress-bar">
+      <p>HTML & CSS</p>
+      <progress value="90" max="100"></progress> 90%
+    </div>
+    <div class="progress-bar">
+      <p>JavaScript</p>
+      <progress value="65" max="100"></progress> 65%
+    </div>
+    <div class="progress-bar">
+      <p>React</p>
+      <progress value="35" max="100"></progress> 35%
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="video-section">
+    <h2>Watch Learning Video</h2>
+    <iframe src="https://www.youtube.com/embed/W6NZfCO5SIk" allowfullscreen></iframe>
+  </section>
+
+  <!-- Instructors Section -->
+  <section id="instructors" class="instructors">
+    <h2>Meet Our Instructors</h2>
+    <div class="instructor">
+      <img src="https://i.pravatar.cc/80?img=12" alt="Instructor 1" />
+      <div>
+        <h3>Ravi Kumar</h3>
+        <p>Expert in Frontend Development and ReactJS</p>
+      </div>
+    </div>
+    <div class="instructor">
+      <img src="https://i.pravatar.cc/80?img=8" alt="Instructor 2" />
+      <div>
+        <h3>Neha Sharma</h3>
+        <p>Specialist in HTML, CSS, and UI Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h4>🟦 Are the courses free?</h4>
+      <p>Yes, most courses on Learnify are free and open to all.</p>
+    </div>
+    <div class="faq-item">
+      <h4>🟦 Can I track my learning progress?</h4>
+      <p>Absolutely! Each course shows a progress bar based on completion.</p>
+    </div>
+    <div class="faq-item">
+      <h4>🟦 Do I get a certificate?</h4>
+      <p>Yes, on completion you can download a certificate of achievement.</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message"></textarea>
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Learnify | Designed by Aman Bhaya | All Rights Reserved
+  </footer>
+
+</body>
+</html>
